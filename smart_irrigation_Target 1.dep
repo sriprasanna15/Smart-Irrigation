@@ -1,0 +1,6 @@
+Dependencies for Project 'smart_irrigation', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x672E1D27)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "Startup.lst" --xref -o "Startup.o" --depend "Startup.d")
+F (.\project.c)(0x672E1BE1)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "project.o" --omf_browse "project.crf" --depend "project.d")
+I (C:\Keil\ARM\Inc\Philips\LPC21xx.H)(0x4F585AA4)
+I (gsm.h)(0x672E1B95)
+I (LCD2.H)(0x672E1BD7)

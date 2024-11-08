@@ -1,0 +1,205 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\v24ce1s9\ARM\Smart Irrigation\smart_irrigation.uvproj
+Project File Date:  10/19/2024
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling project.c...
+linking...
+Program Size: Code=1996 RO-data=32 RW-data=16 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=1996 RO-data=32 RW-data=16 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling project.c...
+linking...
+Program Size: Code=1988 RO-data=32 RW-data=16 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling smart_irrigation.c...
+linking...
+Program Size: Code=2112 RO-data=32 RW-data=16 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling smart_irrigation.c...
+linking...
+Program Size: Code=2112 RO-data=32 RW-data=16 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling smart_irrigation.c...
+linking...
+Program Size: Code=2112 RO-data=32 RW-data=16 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling project.c...
+linking...
+Program Size: Code=1988 RO-data=32 RW-data=16 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling project.c...
+project.c(29): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+project.c:       LCD_str(condition == WET ? "Wet Condition" : "Dry Condition");
+project.c:               ^
+project.c(50): error:  #268: declaration may not appear after executable statement in block
+project.c:       int last_condition = read_moisture(); // Initial state
+project.c:       ^
+project.c: project.c: 1 warning, 1 error
+Target not created
+Build target 'Target 1'
+compiling project.c...
+project.c(50): error:  #268: declaration may not appear after executable statement in block
+project.c:       int last_condition = read_moisture(); // Initial state
+project.c:       ^
+project.c: project.c: 0 warnings, 1 error
+Target not created
+Build target 'Target 1'
+compiling project.c...
+project.c(2): warning:  #223-D: function "LCD_init" declared implicitly
+project.c:       LCD_init();
+project.c:       ^
+project.c(3): error:  #20: identifier "IODIR0" is undefined
+project.c:       IODIR0 |= RELAY_PIN; // Set relay pin as output
+project.c:       ^
+project.c(3): error:  #20: identifier "RELAY_PIN" is undefined
+project.c:       IODIR0 |= RELAY_PIN; // Set relay pin as output
+project.c:                 ^
+project.c(4): error:  #20: identifier "IOSET0" is undefined
+project.c:       IOSET0 = RELAY_PIN; // Initially turn off the motor
+project.c:       ^
+project.c(5): warning:  #223-D: function "LCD_scroll" declared implicitly
+project.c:       LCD_scroll("Smart Irrigation");
+project.c:       ^
+project.c(7): error:  #268: declaration may not appear after executable statement in block
+project.c:       int last_condition = read_moisture(); // Initial state
+project.c:       ^
+project.c(7): warning:  #223-D: function "read_moisture" declared implicitly
+project.c:       int last_condition = read_moisture(); // Initial state
+project.c:                            ^
+project.c(13): warning:  #223-D: function "LCD_command" declared implicitly
+project.c:           LCD_command(0xc0);
+project.c:           ^
+project.c(14): warning:  #223-D: function "LCD_str" declared implicitly
+project.c:           LCD_str(current_condition == 0 ? "Wet" : "Dry");
+project.c:           ^
+project.c(18): error:  #20: identifier "WET" is undefined
+project.c:               if (current_condition == WET) {
+project.c:                                        ^
+project.c(19): warning:  #223-D: function "motor_off" declared implicitly
+project.c:                   motor_off(); // Turn off motor for wet condition
+project.c:                   ^
+project.c(20): warning:  #223-D: function "send_sms" declared implicitly
+project.c:                   send_sms(WET); // Send SMS for wet condition
+project.c:                   ^
+project.c(22): warning:  #223-D: function "motor_on" declared implicitly
+project.c:                   motor_on(); // Turn on motor for dry condition
+project.c:                   ^
+project.c(23): warning:  #223-D: function "send_sms" declared implicitly
+project.c:                   send_sms(DRY); // Send SMS for dry condition
+project.c:                   ^
+project.c(23): error:  #20: identifier "DRY" is undefined
+project.c:                   send_sms(DRY); // Send SMS for dry condition
+project.c:                            ^
+project.c(25): warning:  #223-D: function "update_display" declared implicitly
+project.c:               update_display(current_condition); // Update display with new condition
+project.c:               ^
+project.c(29): warning:  #223-D: function "delay_ms" declared implicitly
+project.c:           delay_ms(1000); // Wait before next reading
+project.c:           ^
+project.c: project.c: 11 warnings, 6 errors
+Target not created
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+project.c(25): error:  #167: argument of type "const char *" is incompatible with parameter of type "char *"
+project.c:       LCD_str(message);
+project.c:               ^
+project.c: project.c: 0 warnings, 1 error
+Target not created
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+linking...
+Program Size: Code=2072 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+linking...
+Program Size: Code=2072 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+"smart_irrigation.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+linking...
+Program Size: Code=2072 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+"smart_proj.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+project.c(27): warning:  #223-D: function "LCD_init" declared implicitly
+project.c:       LCD_init();
+project.c:       ^
+project.c(30): warning:  #223-D: function "LCD_scroll" declared implicitly
+project.c:       LCD_scroll("Smart Irrigation");
+project.c:       ^
+project.c(31): warning:  #223-D: function "LCD_command" declared implicitly
+project.c:       LCD_command(0x01); // Clear display
+project.c:       ^
+project.c(33): warning:  #223-D: function "LCD_str" declared implicitly
+project.c:       LCD_str("The condition:");
+project.c:       ^
+project.c: project.c: 4 warnings, 0 errors
+linking...
+smart_proj.axf: Error: L6218E: Undefined symbol LCD_command (referred from project.o).
+smart_proj.axf: Error: L6218E: Undefined symbol LCD_init (referred from project.o).
+smart_proj.axf: Error: L6218E: Undefined symbol LCD_scroll (referred from project.o).
+smart_proj.axf: Error: L6218E: Undefined symbol LCD_str (referred from project.o).
+smart_proj.axf: Not enough information to list image symbols.
+smart_proj.axf: Finished: 1 information, 0 warning and 4 error messages.
+Target not created
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+linking...
+Program Size: Code=2112 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+"smart_proj.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+linking...
+Program Size: Code=2116 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+"smart_proj.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+linking...
+Program Size: Code=2116 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+"smart_proj.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling Startup.s...
+compiling project.c...
+linking...
+Program Size: Code=2116 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+"smart_proj.axf" - 0 Error(s), 0 Warning(s).
